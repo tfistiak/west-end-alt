@@ -1,0 +1,10 @@
+{{ $cols := .Get "cols" | default "6" | int }}
+{{ $isMarkdown := .Get "isMarkdown" | default "false" }}
+
+<div class="lg:col-{{$cols}} content">
+  {{ if eq $isMarkdown "true" }}
+    {{ .Inner | markdownify }}
+  {{ else }}
+    {{ .Inner | safeHTML }}
+  {{ end }}
+</div>

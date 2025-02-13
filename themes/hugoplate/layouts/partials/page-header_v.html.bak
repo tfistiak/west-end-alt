@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Header Test</title>
+  <style>
+    /* Localized CSS */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 540px; /* Adjust as needed */
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .rounded-2xl {
+      border-radius: 1rem;
+    }
+
+    .bg-cover {
+      background-size: cover;
+    }
+
+    .bg-center {
+      background-position: center;
+    }
+
+    .px-8 {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    .py-14 {
+      padding-top: 3.5rem;
+      padding-bottom: 3.5rem;
+    }
+
+    .text-4xl {
+      font-size: 2.25rem;
+      font-weight: bold;
+    }
+
+    .font-bold {
+      font-weight: bold;
+    }
+
+    .text-white {
+      color: white;
+    }
+
+    .text-gray-200 {
+      color: #e5e7eb;
+    }
+
+    .mt-4 {
+      margin-top: 1rem;
+    }
+
+    .mt-6 {
+      margin-top: 1.5rem;
+    }
+
+    .px-4 {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .py-2 {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .bg-blue-600 {
+      background-color: #2563eb;
+    }
+
+    .hover\:bg-blue-700:hover {
+      background-color: #1d4ed8;
+    }
+
+    .bg-gray-300 {
+      background-color: #d1d5db;
+    }
+
+    .hover\:bg-gray-400:hover {
+      background-color: #9ca3af;
+    }
+
+    .text-gray-800 {
+      color: #1f2937;
+    }
+
+    .rounded-md {
+      border-radius: 0.375rem;
+    }
+
+    .ml-2 {
+      margin-left: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <div class="container text-center">
+      <div
+        class="rounded-2xl bg-cover bg-center px-8 py-14"
+        style="background-image: url('/images/test.png');">
+        <h1 class="text-4xl font-bold text-white">Page Header Title</h1>
+        <h2 class="text-lg text-gray-200 mt-4">Insights and stories from our team</h2>
+        <div class="mt-6">
+          <a href="/about" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">Learn More</a>
+          <a href="/contact" class="px-4 py-2 bg-gray-300 text-gray-800 rounded-md hover:bg-gray-400 ml-2">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+
+

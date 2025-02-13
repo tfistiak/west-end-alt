@@ -1,0 +1,52 @@
+{{ define "main" }}
+  <section class="section-sm">
+    <div class="container">
+      <div class="row items-center">
+        <!-- Image Section -->
+        <div class="md:col-5 mb-6">
+          <img src="/images/contact_page_text.png" alt="Descriptive Alt Text" class="rounded-md mx-auto" />
+        </div>
+
+        <!-- Form Section -->
+        <div class="md:col-7">
+          <form action="{{ site.Params.contact_form_action }}" method="POST">
+            <div class="mb-6">
+              <label for="name" class="form-label">
+                Full Name <span class="text-red-500">*</span>
+              </label>
+              <input
+                id="name"
+                name="name"
+                class="form-input w-96 h-20 appearance-none text-[36px] px-3 py-2 border border-gray-300 rounded-md"
+                placeholder="John Doe"
+                type="text" />
+            </div>
+            <div class="mb-6">
+              <label for="email" class="form-label">
+                Email <span class="text-red-500">*</span>
+              </label>
+              <input
+                id="email"
+                name="email"
+                class="form-input w-96 h-20 appearance-none text-[36px] px-3 py-2 border border-gray-300 rounded-md"
+                placeholder="john.doe@email.com"
+                type="email" />
+            </div>
+            <div class="mb-6">
+              <label for="message" class="form-label">
+                Message <span class="text-red-500">*</span>
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                class="form-input w-full px-3 py-2 border border-gray-300 rounded-md"
+                placeholder="Write your message here..."
+                rows="6"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+{{ end }}

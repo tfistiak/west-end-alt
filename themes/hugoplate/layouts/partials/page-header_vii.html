@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header Test</title>
+  <style>
+    /* Scoped CSS for the header */
+    #custom-header .container {
+      width: 100%;
+      max-width: 540px; /* Limit the width for larger screens */
+      margin: 0 auto;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    #custom-header img {
+      max-width: 100%; /* Ensure the image scales within the container */
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 1rem; /* Matches rounded-2xl */
+    }
+
+    #custom-header h1 {
+      font-size: 2.25rem; /* Matches text-4xl */
+      font-weight: bold;
+      color: white;
+    }
+
+    #custom-header h2 {
+      font-size: 1rem; /* Matches text-lg */
+      color: #e5e7eb; /* Light gray */
+      margin-top: 1rem; /* Matches mt-4 */
+    }
+
+    #custom-header .button {
+      display: inline-block;
+      padding: 0.5rem 1rem; /* Matches px-4 py-2 */
+      border-radius: 0.375rem; /* Matches rounded-md */
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    #custom-header .button-primary {
+      background-color: #2563eb; /* Matches bg-blue-600 */
+      color: white;
+    }
+
+    #custom-header .button-primary:hover {
+      background-color: #1d4ed8; /* Matches hover:bg-blue-700 */
+    }
+
+    #custom-header .button-secondary {
+      background-color: #d1d5db; /* Matches bg-gray-300 */
+      color: #1f2937; /* Matches text-gray-800 */
+      margin-left: 0.5rem; /* Matches ml-2 */
+    }
+
+    #custom-header .button-secondary:hover {
+      background-color: #9ca3af; /* Matches hover:bg-gray-400 */
+    }
+  </style>
+</head>
+<body>
+  <section id="custom-header">
+    <div class="container">
+      <!-- Directly insert the image -->
+      <img src="file:///C:/Users/Owner/Downloads/hugoplate-main/hugoplate-main/assets/images/logo.png" alt="Header Image">
+
+      <h1>Page Header Title</h1>
+      <h2>Insights and stories from our team</h2>
+      <div style="margin-top: 1.5rem;">
+        <a href="/about" class="button button-primary">Learn More</a>
+        <a href="/contact" class="button button-secondary">Contact Us</a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+

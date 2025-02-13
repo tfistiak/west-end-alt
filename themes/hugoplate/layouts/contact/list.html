@@ -1,0 +1,80 @@
+{{ define "main" }}
+<section class="section-sm">
+  <div class="container">
+    <h1 class="text-[{{.Params.large_title.font_size}}] leading-[{{.Params.large_title.line_height}}] font-[{{.Params.large_title.font_weight}}] text-[{{.Params.large_title.color}}] {{ .Params.large_title.font_case}} text-{{ .Params.large_title.text_position}}">{{ .Params.large_title.text }}</h1>
+    <div class="row gap-y-8 mt-16">
+
+      <div class="lg:col-6">
+        <div class="pt-10">
+          <h3 class="mb-6 text-[{{.Params.contact_form.title.font_size}}] leading-[{{.Params.contact_form.title.line_height}}] font-[{{.Params.contact_form.title.font_weight}}] text-[{{.Params.contact_form.title.color}}]">{{ .Params.contact_form.title.text | markdownify }}</h3>
+        
+        </div>
+      </div>
+      
+      <!-- Form Section -->
+      <div class="lg:col-6">
+        <form action="{{ site.Params.contact_form_action }}" method="POST" class="bg-theme-light dark:bg-darkmode-theme-light p-7 rounded-lg">
+          <div class="mb-6">
+            <label for="name" class="form-label">
+              Full Name <span class="text-red-500">*</span>
+            </label>
+            <input id="name" name="name"
+              class="form-input  appearance-none px-3 py-2 border border-gray-300 rounded-md"
+              placeholder="John Doe" type="text" required/>
+          </div>
+          <div class="mb-6">
+            <label for="email" class="form-label">
+              Contact <span class="text-red-500">*</span>
+            </label>
+            {{/*  toggle button between email and number  */}}
+            <div class="flex items-center gap-4 mb-5">
+              <div class="flex items-center">
+                <input type="radio" id="email" name="contact" value="email" checked>
+                <label for="email" class="ml-2">Email</label>
+              </div>
+              <div class="flex items-center">
+                <input type="radio" id="number" name="contact" value="number">
+                <label for="number" class="ml-2">Number</label>
+              </div>
+            </div>
+           <div>
+            <input id="contact" name="email"
+            class="form-input contact_field appearance-none  px-3 py-2 border border-gray-300 rounded-md"
+            placeholder="john.doe@email.com" type="email" required />
+           </div>
+          </div>
+          <div class="mb-6">
+            <label for="message" class="form-label">
+              Message <span class="text-red-500">*</span>
+            </label>
+            <textarea id="message" name="message" class="form-input w-full px-3 py-2 border border-gray-300 rounded-md" required
+              placeholder="Write your message here..." rows="6"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    
+    </div>
+  </div>
+</section>
+
+<script>
+  const contactsToggler = document.querySelectorAll('input[name="contact"]');
+  const contactField = document.querySelector('.contact_field');
+  contactsToggler.forEach((contact) => {
+    contact.addEventListener('change', (e) => {
+      if (e.target.value === 'email') {
+        contactField.placeholder = 'john.doe@email.com';
+        contactField.type = 'email';
+        contactField.name = 'email';
+      } else if (e.target.value === 'number') {
+        contactField.placeholder = '+1234567890';
+        contactField.type = 'number';
+        contactField.name = 'number';
+      }
+    });
+  });
+
+
+</script>
+{{ end }}
