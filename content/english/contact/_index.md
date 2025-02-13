@@ -2,14 +2,14 @@
 title: "Contact: haha I know where you live!"
 meta_title: "Really I do!"
 description: "this is meta description"
-large_title:
-    text: contact us.
-    font_size: 4vw 
-    line_height: 1.2
-    font_weight: 400
-    color: "#000"
-    font_case: uppercase
-    text_position: center
+# large_title:
+#     text: contact us.
+#     font_size: 4vw 
+#     line_height: 1.2
+#     font_weight: 400
+#     color: "#000"
+#     font_case: uppercase
+#     text_position: center
 
 contact_form:
  title: 
